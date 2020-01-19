@@ -1,0 +1,24 @@
+.apps {
+    background-color: #b791e3;
+}
+
+.skills {
+    background-color: #91c6e3;
+}
+
+.employment {
+    background-color: #db95c0;
+}
+
+.methodology {
+    background-color: #db95c0;
+}
+
+.navbar.bg-dark {
+    color: white;
+}
+
+.jumbotron {
+    background-image: url("./assets/jumbotron.jpg");
+    background-size: cover;
+}
