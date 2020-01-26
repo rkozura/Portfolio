@@ -2,24 +2,38 @@ html,body,#root {
     height: 100%;
 }
 
+#root {
+    overflow-y: auto;
+}
+
 body {
     background-image: linear-gradient(to bottom, rgba(200,200,200,0), rgba(200,200,200,1));
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
+h1 {
+    font-family: 'Mija';
 }
 
-.flex-grow {
-    flex: 1 0 auto;
+.top-left {
+    z-index: 10;
+    position: fixed !important;
+    top: 0;
+    left: 0;
 }
 
 .example-appear {
     opacity: 0.01;
-  }
+}
   
-  .example-appear.example-appear-active {
+.example-appear.example-appear-active {
     opacity: 1;
-    transition: opacity .5s ease-in;
-  }
+    transition: opacity 2.0s ease-in;
+}
+
+.center-container {
+    display:flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

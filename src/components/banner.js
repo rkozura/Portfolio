@@ -1,51 +1,122 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Carousel from 'react-bootstrap/Carousel';
-import InfoCard from './info-card';
-import rob from '../assets/rob.jpg';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import bcbssc from '../assets/bcbssc.jpg';
-import Technica from '../assets/technica.png';
-import vue from '../assets/vue.png';
-import react from '../assets/react.png';
-import js from '../assets/js.jpg';
-import jmu from '../assets/jmu.jpg';
-import java from '../assets/java.jpg';
+import {
+    Navbar,
+    Nav,
+    Carousel,
+    Container,
+    Row,
+    Col,
+} from 'react-bootstrap';
 import RK from '../assets/RK.svg';
-import dartflutter from '../assets/dart-flutter.png';
-import { Route, Link, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 
 function Overview() {
     return (
-        <div className="d-flex flex-grow flex-column align-items-center justify-content-center">
-            <h1 className="text-primary display-1"><strong>HELLO!</strong></h1>
-            <p class="lead">My name is <span className="text-info">Robert Kozura</span></p>
-            <p>I love coding frontend single page applications!</p>
-        </div>
+        <Container className="center-container">
+            <Row>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>HELLO</strong></h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h2>My name is <a href="#">Robert Kozura</a></h2>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h3>I am a web developer who loves clean code</h3>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h3>VueJs - ReactJs - ES6 - Java</h3>
+                </Col>
+            </Row>
+        </Container>
     );
-}                  
+}
+
+function Skills() {
+    return (
+        <Container className="center-container">
+            <Row>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+                <Col>
+                    <h1 className="text-primary display-1"><strong>SKILLS</strong></h1>
+                </Col>
+            </Row>
+        </Container>
+    );
+}
 
 export default class Banner extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {activeIndex: 0};
+
+        this.changeActiveIndex = this.changeActiveIndex.bind(this);
+    }
+
+    changeActiveIndex(index, event) {
+        event.preventDefault();
+        this.setState({
+            activeIndex: index
+        });
+    }
+
     render() {
         return (
-            <div className="d-flex flex-grow flex-column">
-                <Navbar>
-                    <Navbar.Brand>
-                        <img width="50" height="50" src={RK}/>
-                    </Navbar.Brand>
-                    <Nav activeKey="" className="mr-auto">
-                        <Nav.Link to="/overview">Overview</Nav.Link>
-                        <Nav.Link to="/skills">Skills</Nav.Link>
-                        <Nav.Link to="/contact">Contact</Nav.Link>
-                    </Nav>
-                </Navbar>
-                <Overview/>
+            <div>
+                <div className="top-left">
+                    <Navbar>
+                        <Navbar.Brand>
+                            <a href="#"><img onClick={(event) => this.changeActiveIndex(0, event)} width="50" height="50" src={RK}/></a>
+                        </Navbar.Brand>
+                        <Nav className="mr-auto">
+                            <Nav.Link onClick={(event) => this.changeActiveIndex(1, event)}>Overview</Nav.Link>
+                            <Nav.Link onClick={(event) => this.changeActiveIndex(2, event)}>Skills</Nav.Link>
+                            <Nav.Link onClick={(event) => this.changeActiveIndex(3, event)}>Contact</Nav.Link>
+                        </Nav>
+                    </Navbar>
+                </div>
+                <Container fluid={true}>
+                    <Carousel
+                        controls={false}
+                        indicators={false}
+                        defaultActiveIndex={0}
+                        activeIndex={this.state.activeIndex}
+                        onSelect={()=>{}}>
+                        <Carousel.Item>
+                            <Overview></Overview>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Skills></Skills>
+                        </Carousel.Item>
+                    </Carousel>
+                </Container>
             </div>
         );
     }

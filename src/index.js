@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Banner from './components/banner';
+import Resume from './components/resume';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    CSSTransitionGroup
+} from 'react-transition-group';
   
-  class Resume extends React.Component {
+  class Index extends React.Component {
     render() {
       return (
-        <Banner />
+        <Resume />
       );
     }
   }
@@ -15,6 +18,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   // ========================================
   
   ReactDOM.render(
-    <Resume />,
+    <CSSTransitionGroup
+    transitionName="example"
+    transitionAppear={true}>
+        <Index />
+    </CSSTransitionGroup>,
     document.getElementById('root')
   );
