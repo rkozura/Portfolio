@@ -1,0 +1,50 @@
+[
+    {
+        "title": "VueJs",
+        "text": "Designed and crafted large SPAs and special purpose web components 🤓",
+        "buttonText": "More info",
+        "thumbnail": "vue.png"
+    },
+    {
+        "title": "ReactJs",
+        "text": "I wrote this portfolio page in ReactJs! ❤️",
+        "buttonText": "More info",
+        "thumbnail": "react.png"
+    },
+    {
+        "title": "Javascript",
+        "text": "ES6 for the win!",
+        "buttonText": "More info",
+        "thumbnail": "js.jpg"
+    },
+    {
+        "title": "Java",
+        "text": "Implemented business logic and exposed resources using JAX-WS",
+        "buttonText": "More info",
+        "thumbnail": "java.jpg"
+    },
+    {
+        "title": "Flutter",
+        "text": "The fun way to make mobile apps!",
+        "buttonText": "More info",
+        "thumbnail": "dart-flutter.png"
+    },
+    {
+        "title": "Git",
+        "text": "git checkout -b \"lets-do-some-coding\"",
+        "buttonText": "More info",
+        "thumbnail": "git.png"
+    },
+    {
+        "title": "Agile",
+        "text": "Stand ups, Sprint Reviews, Sprint Retros Oh My!",
+        "buttonText": "More info",
+        "thumbnail": "agile.png"
+    },
+    {
+        "title": "Clean code",
+        "text": "Test it, write it, refactor it",
+        "buttonText": "More info",
+        "thumbnail": "clean-code.png"
+    }
+]

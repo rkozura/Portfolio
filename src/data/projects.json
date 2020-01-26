@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Portfolio",
+        "text": "A ReactJs web page with clean aesthetics",
+        "button": {
+            "text": "GitHub",
+            "action": {"type": "external", "location": "https://github.com/rkozura/EasySeating"}
+        }
+    },
+    {
+        "title": "EasySeating",
+        "text": "A Java/Libgdx app that generates seating charts",
+        "button": {
+            "text": "GitHub",
+            "action": {"type": "external", "location": "https://github.com/rkozura/EasySeating"}
+        }
+    },
+    {
+        "title": "Sound O' Rama",
+        "text": "A Dart/Flutter app that can record and playback sounds",
+        "button": {
+            "text": "GitHub",
+            "action": {"type": "external", "location": "https://github.com/rkozura/Soundorama"}
+        }
+    }
+]
